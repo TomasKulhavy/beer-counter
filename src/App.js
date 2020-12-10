@@ -12,16 +12,11 @@ function App() {
   const [total, setTotal] = useState(initialState.total);
   const tableCount = initialState.tables.length;
 
-  const incTotal = () => (
-    total + 1
-    setTotal(total)
-  )
-
   return (
     <div className="App">
       <NavigationBar />
       <Container>
-        <Restaurant name={name} tables={tables} total={total} setTotal={setTotal} tableCount={tableCount} />
+        <Restaurant name={name} tables={tables} total={total} tableCount={tableCount} />
       </Container>
     </div>
   );
