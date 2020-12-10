@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import NavigationBar from "./components/NavigationBar";
+import Restaurant from "./components/Restaurant";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'reactstrap';
 
 function App() {
+  const initialState = {name: "U poníka", tables: [[1,0,0,0], [1,2,3], [0,1]], total: 8};
+  const [name, setName] = useState(initialState.name);
+  const [tables, setTables] = useState(initialState.tables);
+  const [total, setTotal] = useState(initialState.total);
+  const tableCount = initialState.tables.length;
+
+  const incTotal = () => (
+    total + 1
+    setTotal(total)
+  )
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavigationBar />
+      <Container>
+        <Restaurant name={name} tables={tables} total={total} setTotal={setTotal} tableCount={tableCount} />
+      </Container>
     </div>
   );
 }
