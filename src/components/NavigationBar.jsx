@@ -1,13 +1,13 @@
 import React from 'react';
 import { Navbar, Nav, NavItem, Button, NavbarBrand } from "reactstrap";
 
-function NavigationBar() {
+function NavigationBar({addTables}) {
     return (
         <Navbar color="light" light expand="md">
             <NavbarBrand href="/">Chlebíčko braní</NavbarBrand>
             <Nav>
                 <NavItem>
-                    <Button color="secondary" href="/">Vymazat data</Button>
+                    <Button color="secondary" onClick={() => addTables()}>Vymazat data</Button>
                 </NavItem>
                 <NavItem>
                     <Button color="secondary" href="/">Počáteční stav</Button>

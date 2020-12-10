@@ -1,12 +1,12 @@
 import React from 'react';
-import { Row, Col, Card, CardTitle, CardText, Button } from "reactstrap";
+import { Row, Card, CardTitle, CardText, Button } from "reactstrap";
 
-const Table = ({item, index}) => (
+const Table = ({item, index, addChlebicek, tables}) => (
     <Card body>
         <CardTitle tag="h5">Stůl: {index + 1}</CardTitle>
-        <CardText>Konzumace: </CardText>
+        <CardText>Konzumace: {tables}</CardText>
         <Row>
-            {item.map((index) => <Button>{index}</Button>)}
+            {item.map((value, indexChair) => <Button onClick={() => addChlebicek(index, indexChair)}>{value}</Button>)}
             <Button color="success">+</Button>
         </Row>
     </Card>
