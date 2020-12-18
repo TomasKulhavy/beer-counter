@@ -7,13 +7,13 @@ function NavigationBar({addTable}) {
             <NavbarBrand href="/">Chlebíčko braní</NavbarBrand>
             <Nav>
                 <NavItem>
-                    <Button color="secondary" href="/">Vymazat data</Button>
+                    <Button color="secondary" className="m-1" href="/">Vymazat data</Button>
                 </NavItem>
                 <NavItem>
-                    <Button color="secondary" href="/">Počáteční stav</Button>
+                    <Button color="secondary" className="m-1" href="/">Počáteční stav</Button>
                 </NavItem>
                 <NavItem>
-                    <Button color="success" onClick={addTable}>Přidat stůl</Button>
+                    <Button color="success" className="m-1" onClick={addTable}>Přidat stůl</Button>
                 </NavItem>
             </Nav>
         </Navbar>

@@ -6,8 +6,8 @@ const Table = ({item, index, addChlebicek, tables, addChair}) => (
         <CardTitle tag="h5">Stůl: {index + 1}</CardTitle>
         <CardText>Konzumace: {item}</CardText>
         <Row>
-            {item.map((value, indexChair) => <Button onClick={() => addChlebicek(index, indexChair)}>{value}</Button>)}
-            <Button color="success" onClick={() => addChair(index)}>+</Button>
+            {item.map((value, indexChair) => <Button className="m-1" onClick={() => addChlebicek(index, indexChair)}>{value}</Button>)}
+            <Button color="success" className="m-1" onClick={() => addChair(index)}>+</Button>
         </Row>
     </Card>
 )
